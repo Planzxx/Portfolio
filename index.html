@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jorge Zambrana · Analista de datos</title>
+<meta name="description" content="Portfolio de Jorge Zambrana, analista de datos junior: Python, Pandas, SQL, AWS y data storytelling.">
+<meta name="author" content="Jorge Zambrana">
+<meta name="theme-color" content="#12395B">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src data:; base-uri 'none'; form-action 'none'">
+<meta property="og:title" content="Jorge Zambrana · Analista de datos">
+<meta property="og:description" content="Portfolio de analista de datos junior: Python, Pandas, SQL, AWS y data storytelling.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%2312395B'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-weight='800' font-size='26' fill='white'%3EJZ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Caveat:wght@600;700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+
+body{margin:0}
+html{scroll-behavior:smooth}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:3px solid #7fb2e0;outline-offset:3px}
+.fw{fill:#ffffff}
+.sk{fill:#F6F2EE}
+.dp{fill:var(--deep)}
+.fp{fill:var(--paper)}
+.navlink{position:relative;padding:6px 0;background:linear-gradient(currentColor,currentColor) left bottom/0 2px no-repeat;transition:background-size .3s ease}
+.navlink:hover{background-size:100% 2px}
+.btn-solid:hover{transform:translateY(-2px)}
+.btn-solid,.btn-ghost{position:relative;overflow:hidden}
+.btn-solid::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.4),transparent);transform:skewX(-20deg);pointer-events:none}
+.btn-solid:hover::after{animation:shine .8s ease}
+@keyframes shine{to{left:140%}}
+.btn-ghost:hover{background:#12395B;color:#ffffff}
+.chip{transition:background .2s ease,color .2s ease,transform .3s cubic-bezier(.3,1.6,.5,1) !important}
+.chip:hover{background:#ffffff;color:#12395B;transform:translateY(-4px) rotate(-2deg)}
+.tool:hover{transform:translateY(-3px) rotate(-3deg)}
+.card{transition:transform .25s ease, box-shadow .25s ease}
+.card:hover{transform:translateY(-8px) rotate(-0.6deg);box-shadow:0 18px 36px rgba(18,57,91,.18)}
+.sheet{transition:transform .3s ease}
+.sheet:hover{transform:rotate(0deg) !important}
+.timeline-item:hover .dot{background:#12395B}
+.pillink:hover{transform:translateY(-2px)}
+.contact-row{transition:transform .25s ease}
+.contact-row:hover{transform:translateX(8px)}
+.contact-row:hover .contact-ico{background:#ffffff;color:#12395B}
+@keyframes fadeUp{from{opacity:0;translate:0 28px}to{opacity:1;translate:0 0}}
+@keyframes popIn{from{opacity:0;scale:.6;rotate:-10deg}to{opacity:1;scale:1;rotate:0deg}}
+@keyframes floaty{0%,100%{translate:0 0}50%{translate:0 -16px}}
+@keyframes twinkle{0%,100%{opacity:1;scale:1;rotate:0deg}50%{opacity:.4;scale:.7;rotate:25deg}}
+@keyframes spin{to{rotate:360deg}}
+@keyframes rise{from{opacity:0;translate:0 60px}to{opacity:1;translate:0 0}}
+@keyframes wave{0%,100%{rotate:-4deg}50%{rotate:5deg}}
+@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -7px}}
+@keyframes grow{from{scale:0 1}to{scale:1 1}}
+@keyframes wipe{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes spreadL{to{translate:-7cqw -2cqw;rotate:-3deg}}
+@keyframes spreadR{to{translate:7cqw -2cqw;rotate:3deg}}
+@keyframes figureScroll{to{translate:0 3cqw;scale:1.05}}
+.bob{animation:bob 4.5s ease-in-out infinite}
+.hov{display:inline-block;transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+.hov:hover{transform:translateY(-2cqw) rotate(-4deg)}
+.progress{display:none}
+@keyframes drop{0%{opacity:0;translate:0 -30cqw;rotate:-22deg}55%{opacity:1}100%{opacity:1;translate:0 0;rotate:0deg}}
+@keyframes figIn{0%{opacity:0;translate:0 12cqw;scale:.92 1.08}55%{opacity:1;scale:1.04 .96}100%{opacity:1;translate:0 0;scale:1 1}}
+@keyframes drift{to{background-position:28px 28px}}
+@keyframes blink{0%,93%,100%{scale:1 1}96%{scale:1 .08}}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(127,178,224,.75)}100%{box-shadow:0 0 0 10px rgba(127,178,224,0)}}
+@keyframes shimmer{to{background-position:-300% 0}}
+@keyframes maskUp{from{translate:0 105%}to{translate:0 0}}
+@keyframes slideL{from{opacity:0;translate:-90px 0;rotate:-3deg}to{opacity:1;translate:0 0;rotate:0deg}}
+@keyframes slideR{from{opacity:0;translate:90px 0;rotate:3deg}to{opacity:1;translate:0 0;rotate:0deg}}
+@keyframes dotPop{0%{scale:0}70%{scale:1.5}100%{scale:1}}
+@keyframes shiftX{from{translate:12% 0}to{translate:-48% 0}}
+.drop{animation:drop 1s cubic-bezier(.3,1.5,.5,1) both}
+.figin{animation:figIn 1.1s cubic-bezier(.2,.9,.3,1.15) both}
+.drift{animation:drift 30s linear infinite}
+.blink{transform-box:fill-box;transform-origin:center;animation:blink 5s ease-in-out infinite}
+.pdot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#7fb2e0;margin-right:8px;animation:ping 1.8s ease-out infinite}
+.shimmer{background:linear-gradient(100deg,var(--tile) 30%,#eef0f4 50%,var(--tile) 70%) 0 0/300% 100%;animation:shimmer 3s linear infinite}
+.tl{position:relative;padding:8px 14px;color:var(--navy);font-size:14px;font-weight:600;border-radius:999px;transition:background .2s ease}
+.tl i{font-style:normal;font-size:10px;font-weight:800;margin-right:6px;opacity:.5;letter-spacing:.06em}
+.tl:hover{background:rgba(18,57,91,.09)}
+section{scroll-margin-top:64px}
+@keyframes ringSpin{to{rotate:360deg}}
+@keyframes bustUp{from{translate:0 22%}to{translate:0 0}}
+@keyframes circIn{from{opacity:0;scale:.85}to{opacity:1;scale:1}}
+.ring{animation:ringSpin 40s linear infinite}
+.nlink{position:static;display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:800;color:var(--navy);padding-top:6px}
+.nlink::after{content:'';position:absolute;inset:0;z-index:2}
+.card:hover .nlink span{transform:translateX(4px) translateY(-2px)}
+.nlink span{display:inline-block;transition:transform .25s ease}
+@media (max-width: 560px){.hmeta span:last-child{display:none}}
+@media (max-width: 860px){.tb-links{display:none !important}}
+@media (max-width: 420px){.tb-name{display:none}}
+.in{animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) both}
+.pop{animation:popIn .9s cubic-bezier(.2,1.3,.4,1) both}
+.rise{animation:rise 1s cubic-bezier(.2,.8,.2,1) both}
+.stagger > *{animation:fadeUp .9s cubic-bezier(.2,.7,.2,1) both}
+.stagger > *:nth-child(1){animation-delay:.15s}
+.stagger > *:nth-child(2){animation-delay:.35s}
+.stagger > *:nth-child(3){animation-delay:.5s}
+.float{animation:floaty 7s ease-in-out infinite}
+.twinkle{animation:twinkle 3.4s ease-in-out infinite}
+.spin{animation:spin 26s linear infinite}
+.wave{animation:wave 3.2s ease-in-out infinite;transform-origin:50% 100%}
+@supports (animation-timeline: view()){
+.reveal{animation:fadeUp linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
+.popview{animation:popIn linear both;animation-timeline:view();animation-range:entry 10% entry 70%}
+.circview{animation:circIn linear both;animation-timeline:view();animation-range:entry 0% entry 60%}
+.bustview{animation:bustUp linear both;animation-timeline:view();animation-range:entry 10% cover 45%}
+.draw{animation:wipe linear both;animation-timeline:view();animation-range:entry 25% cover 45%}
+.growview{animation:grow linear both;animation-timeline:view();animation-range:entry 10% entry 90%}
+.spreadL{animation:spreadL linear both;animation-timeline:scroll(root);animation-range:0 600px}
+.spreadR{animation:spreadR linear both;animation-timeline:scroll(root);animation-range:0 600px}
+.figscroll{animation:figureScroll linear both;animation-timeline:scroll(root);animation-range:0 600px}
+.progress{display:block;animation:grow linear both;animation-timeline:scroll(root)}
+.maskup > span{display:block;animation:maskUp linear both;animation-timeline:view();animation-range:entry 0% entry 75%}
+.slideL{animation:slideL linear both;animation-timeline:view();animation-range:entry 0% entry 70%}
+.slideR{animation:slideR linear both;animation-timeline:view();animation-range:entry 0% entry 70%}
+.dot{animation:dotPop linear both;animation-timeline:view();animation-range:entry 0% entry 80%}
+.shift{animation:shiftX linear both;animation-timeline:view();animation-range:cover 0% cover 100%}
+}
+@media (prefers-reduced-motion: reduce){.card,.btn-solid,.tool,.sheet,.pillink,.contact-row{transition:none}.card:hover,.btn-solid:hover,.tool:hover,.pillink:hover,.contact-row:hover{transform:none}.in,.pop,.rise,.stagger > *,.float,.twinkle,.spin,.wave,.reveal,.popview,.bob,.marq,.draw,.growview,.spreadL,.spreadR,.figscroll,.progress{animation:none !important}.hov{transition:none}.hov:hover{transform:none}.progress{display:none}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none !important;transition:none !important}.hov:hover{transform:none}.progress{display:none !important}}
+</style>
+</head>
+<body>
+
+
+<div style="--navy: #12395B; --paper: #E9EAEE; --tile: #D9D9DB; --navy2: color-mix(in srgb, var(--navy) 78%, white); --navy3: color-mix(in srgb, var(--navy) 45%, white); --deep: color-mix(in srgb, var(--navy) 58%, black); width: 100%; background: var(--paper); color: var(--navy); font-family: 'Inter', system-ui, sans-serif; overflow-x: clip">
+
+  <header class="topbar" style="position: fixed; top: 0; left: 0; right: 0; z-index: 60; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px clamp(16px, 3vw, 40px); background: color-mix(in srgb, var(--paper) 88%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid rgba(18,57,91,.14)">
+    <a href="#inicio" style="display: inline-flex; align-items: center; gap: 10px; color: var(--navy); font-weight: 800; font-size: 17px; letter-spacing: -0.01em">
+      <span aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: var(--navy); color: #ffffff; font-size: 13px; font-weight: 800; letter-spacing: 0.02em">JZ</span>
+      <span class="tb-name">Jorge Zambrana</span>
+    </a>
+    <nav class="tb-links" aria-label="Principal" style="display: flex; align-items: center; gap: 6px">
+      <a class="tl" href="#sobre-mi"><i>01</i>Sobre mí</a>
+      <a class="tl" href="#trayectoria"><i>02</i>Trayectoria</a>
+      <a class="tl" href="#skills"><i>03</i>Skills</a>
+      <a class="tl" href="#proyectos"><i>04</i>Proyectos</a>
+    </nav>
+    <a class="btn-solid" href="#contacto" style="display: inline-flex; align-items: center; min-height: 40px; padding: 0 22px; background: var(--navy); color: #ffffff; font-weight: 700; font-size: 14px; border-radius: 999px; transition: transform .2s ease">Contacto</a>
+    <div class="progress" aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; background: #7fb2e0; transform-origin: left center"></div>
+  </header>
+
+
+  <!-- cabeza reutilizable de las ilustraciones -->
+  <svg width="0" height="0" aria-hidden="true" style="position: absolute">
+    <defs>
+      <g id="cover-01">
+        <rect width="600" height="240" fill="#D9D9DB"></rect>
+        <path d="M0 28H600M0 56H600M0 84H600M0 112H600M0 140H600M0 168H600M0 196H600M0 224H600M28 0V240M56 0V240M84 0V240M112 0V240M140 0V240M168 0V240M196 0V240M224 0V240M252 0V240M280 0V240M308 0V240M336 0V240M364 0V240M392 0V240M420 0V240M448 0V240M476 0V240M504 0V240M532 0V240M560 0V240M588 0V240" stroke="#12395B" stroke-opacity=".07" stroke-width="1" fill="none"></path>
+        <path d="M30 200H300" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none"></path>
+        <rect x="52" y="96" width="76" height="104" fill="#ffffff" stroke="currentColor" stroke-width="4" stroke-linejoin="round"></rect>
+        <rect x="64" y="108" width="14" height="12" rx="2" fill="#12395B"></rect><rect x="86" y="108" width="14" height="12" rx="2" fill="#12395B"></rect><rect x="108" y="108" width="14" height="12" rx="2" fill="#12395B"></rect><rect x="64" y="130" width="14" height="12" rx="2" fill="#12395B"></rect><rect x="86" y="130" width="14" height="12" rx="2" fill="#12395B"></rect><rect x="108" y="130" width="14" height="12" rx="2" fill="#12395B"></rect><rect x="64" y="152" width="14" height="12" rx="2" fill="#12395B"></rect><rect x="86" y="152" width="14" height="12" rx="2" fill="#12395B"></rect><rect x="108" y="152" width="14" height="12" rx="2" fill="#12395B"></rect><rect x="64" y="174" width="14" height="12" rx="2" fill="#12395B"></rect><rect x="86" y="174" width="14" height="12" rx="2" fill="#12395B"></rect><rect x="108" y="174" width="14" height="12" rx="2" fill="#12395B"></rect>
+        <rect x="140" y="46" width="84" height="154" fill="#0b2740" stroke="currentColor" stroke-width="4" stroke-linejoin="round"></rect>
+        <rect x="154" y="60" width="14" height="14" rx="2" fill="#ffffff"></rect><rect x="178" y="60" width="14" height="14" rx="2" fill="#ffffff"></rect><rect x="202" y="60" width="14" height="14" rx="2" fill="#ffffff"></rect><rect x="154" y="86" width="14" height="14" rx="2" fill="#ffffff"></rect><rect x="178" y="86" width="14" height="14" rx="2" fill="#ffffff"></rect><rect x="202" y="86" width="14" height="14" rx="2" fill="#ffffff"></rect><rect x="154" y="112" width="14" height="14" rx="2" fill="#ffffff"></rect><rect x="178" y="112" width="14" height="14" rx="2" fill="#ffffff"></rect><rect x="202" y="112" width="14" height="14" rx="2" fill="#ffffff"></rect><rect x="154" y="138" width="14" height="14" rx="2" fill="#ffffff"></rect><rect x="178" y="138" width="14" height="14" rx="2" fill="#ffffff"></rect><rect x="202" y="138" width="14" height="14" rx="2" fill="#ffffff"></rect><rect x="154" y="164" width="14" height="14" rx="2" fill="#ffffff"></rect><rect x="178" y="164" width="14" height="14" rx="2" fill="#ffffff"></rect><rect x="202" y="164" width="14" height="14" rx="2" fill="#ffffff"></rect>
+        <rect x="236" y="120" width="60" height="80" fill="#ffffff" stroke="currentColor" stroke-width="4" stroke-linejoin="round"></rect>
+        <rect x="248" y="132" width="14" height="12" rx="2" fill="#12395B"></rect><rect x="272" y="132" width="14" height="12" rx="2" fill="#12395B"></rect><rect x="248" y="154" width="14" height="12" rx="2" fill="#12395B"></rect><rect x="272" y="154" width="14" height="12" rx="2" fill="#12395B"></rect><rect x="248" y="176" width="14" height="12" rx="2" fill="#12395B"></rect><rect x="272" y="176" width="14" height="12" rx="2" fill="#12395B"></rect>
+        <circle cx="266" cy="30" r="22" fill="currentColor"></circle>
+        <text x="266" y="39" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="26" fill="#ffffff">€</text>
+        <g transform="translate(0 24)"><rect x="338" y="30" width="236" height="160" rx="14" fill="#ffffff" stroke="currentColor" stroke-width="4"></rect>
+        <path d="M358 52V166H554" fill="none" stroke="currentColor" stroke-opacity=".4" stroke-width="3" stroke-linecap="round"></path>
+        <polyline points="366,152 404,146 440,124 478,98 514,72 546,50" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></polyline>
+        <polyline points="366,152 404,150 440,146 478,142 514,138 546,132" fill="none" stroke="#7fb2e0" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></polyline>
+        <circle cx="546" cy="50" r="7" fill="currentColor"></circle>
+        <circle cx="546" cy="132" r="7" fill="#7fb2e0" stroke="currentColor" stroke-width="3"></circle>
+      </g></g>
+      <g id="cover-02">
+        <rect width="600" height="240" fill="#D9D9DB"></rect>
+        <path d="M0 28H600M0 56H600M0 84H600M0 112H600M0 140H600M0 168H600M0 196H600M0 224H600M28 0V240M56 0V240M84 0V240M112 0V240M140 0V240M168 0V240M196 0V240M224 0V240M252 0V240M280 0V240M308 0V240M336 0V240M364 0V240M392 0V240M420 0V240M448 0V240M476 0V240M504 0V240M532 0V240M560 0V240M588 0V240" stroke="#12395B" stroke-opacity=".07" stroke-width="1" fill="none"></path>
+        <rect x="56" y="40" width="250" height="26" rx="5" fill="#12395B" stroke="currentColor" stroke-width="4"></rect><circle cx="306" cy="53" r="11" fill="#ffffff" stroke="currentColor" stroke-width="4"></circle><rect x="56" y="80" width="214" height="26" rx="5" fill="#4f7597" stroke="currentColor" stroke-width="4"></rect><circle cx="270" cy="93" r="11" fill="#ffffff" stroke="currentColor" stroke-width="4"></circle><rect x="56" y="120" width="178" height="26" rx="5" fill="#7fb2e0" stroke="currentColor" stroke-width="4"></rect><circle cx="234" cy="133" r="11" fill="#ffffff" stroke="currentColor" stroke-width="4"></circle><rect x="56" y="160" width="140" height="26" rx="5" fill="#ffffff" stroke="currentColor" stroke-width="4"></rect><circle cx="196" cy="173" r="11" fill="#ffffff" stroke="currentColor" stroke-width="4"></circle>
+        <path d="M388 100L476 62L564 100L476 138Z" fill="currentColor" stroke="currentColor" stroke-width="4" stroke-linejoin="round"></path>
+        <path d="M430 120V156C450 176 502 176 522 156V120L476 140Z" fill="#ffffff" stroke="currentColor" stroke-width="4" stroke-linejoin="round"></path>
+        <path d="M552 104V160" stroke="currentColor" stroke-width="4" stroke-linecap="round"></path>
+        <circle cx="552" cy="166" r="8" fill="#7fb2e0" stroke="currentColor" stroke-width="4"></circle>
+        <path d="M420 36l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" fill="currentColor"></path>
+      </g>
+      <g id="cover-03">
+        <rect width="600" height="240" fill="#D9D9DB"></rect>
+        <path d="M0 28H600M0 56H600M0 84H600M0 112H600M0 140H600M0 168H600M0 196H600M0 224H600M28 0V240M56 0V240M84 0V240M112 0V240M140 0V240M168 0V240M196 0V240M224 0V240M252 0V240M280 0V240M308 0V240M336 0V240M364 0V240M392 0V240M420 0V240M448 0V240M476 0V240M504 0V240M532 0V240M560 0V240M588 0V240" stroke="#12395B" stroke-opacity=".07" stroke-width="1" fill="none"></path>
+        <path d="M30 200H300" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none"></path>
+        <path d="M80 118C58 118 52 92 74 86C76 58 112 52 126 74C142 54 180 62 182 88C208 88 216 118 192 118Z" fill="#ffffff" stroke="currentColor" stroke-width="4" stroke-linejoin="round"></path>
+        <path d="M82 134L74 152M112 134L104 152M176 134L168 152M206 130L198 148" stroke="#7fb2e0" stroke-width="5" stroke-linecap="round" fill="none"></path>
+        <polygon points="136,124 114,168 134,168 122,206 166,156 144,156 158,124" fill="#7fb2e0" stroke="currentColor" stroke-width="4" stroke-linejoin="round"></polygon>
+        <circle cx="244" cy="62" r="26" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="4 8" stroke-linecap="round"></circle>
+        <circle cx="244" cy="62" r="9" fill="currentColor"></circle>
+        <path d="M338 192H574" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none"></path>
+        <rect x="338" y="158" width="22" height="34" rx="3" fill="#12395B" stroke="currentColor" stroke-width="3"></rect><rect x="368" y="140" width="22" height="52" rx="3" fill="#12395B" stroke="currentColor" stroke-width="3"></rect><rect x="398" y="152" width="22" height="40" rx="3" fill="#12395B" stroke="currentColor" stroke-width="3"></rect><rect x="428" y="116" width="22" height="76" rx="3" fill="#12395B" stroke="currentColor" stroke-width="3"></rect><rect x="458" y="132" width="22" height="60" rx="3" fill="#12395B" stroke="currentColor" stroke-width="3"></rect><rect x="488" y="70" width="22" height="122" rx="3" fill="#7fb2e0" stroke="currentColor" stroke-width="3"></rect><rect x="518" y="122" width="22" height="70" rx="3" fill="#12395B" stroke="currentColor" stroke-width="3"></rect><rect x="548" y="96" width="22" height="96" rx="3" fill="#12395B" stroke="currentColor" stroke-width="3"></rect>
+      </g>
+      <g id="jz-head">
+        <ellipse class="sk" cx="49" cy="122" rx="9" ry="15" stroke="currentColor" stroke-width="4"></ellipse>
+        <ellipse class="sk" cx="151" cy="122" rx="9" ry="15" stroke="currentColor" stroke-width="4"></ellipse>
+        <path class="sk" stroke="currentColor" stroke-width="4" stroke-linejoin="round" d="M50,110 C50,72 72,54 100,54 C128,54 150,72 150,110 C150,150 138,180 118,192 Q100,202 82,192 C62,180 50,150 50,110 Z"></path>
+        <path fill="currentColor" opacity=".16" d="M54,138 C62,172 84,194 100,196 C116,194 138,172 146,138 C138,166 118,184 100,184 C82,184 62,166 54,138 Z"></path>
+        <path fill="currentColor" d="M44,118 C28,70 50,18 100,16 C152,14 176,66 156,118 C154,102 150,94 144,90 C132,98 116,88 100,94 C84,100 66,92 56,88 C50,94 46,106 44,118 Z"></path>
+        <path fill="currentColor" d="M90,22 C82,8 94,-2 108,6 C100,8 100,14 106,22 Z"></path>
+        <path fill="none" stroke="#ffffff" opacity=".3" stroke-width="3" stroke-linecap="round" d="M68,46 C78,34 94,30 110,32"></path>
+        <path fill="none" stroke="#ffffff" opacity=".3" stroke-width="3" stroke-linecap="round" d="M122,36 C134,38 144,48 150,62"></path>
+        <path fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" d="M64,106 Q78,99 93,105"></path>
+        <path fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" d="M107,105 Q122,99 136,106"></path>
+        <ellipse class="blink" fill="currentColor" cx="79" cy="121" rx="4.5" ry="5.5"></ellipse>
+        <ellipse class="blink" fill="currentColor" cx="121" cy="121" rx="4.5" ry="5.5"></ellipse>
+        <circle cx="78" cy="121" r="21" fill="#ffffff" fill-opacity=".32" stroke="currentColor" stroke-width="4"></circle>
+        <circle cx="122" cy="121" r="21" fill="#ffffff" fill-opacity=".32" stroke="currentColor" stroke-width="4"></circle>
+        <path fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" d="M99,117 Q100,112 101,117"></path>
+        <path fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" d="M57,118 L49,114 M143,118 L151,114"></path>
+        <path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M100,134 C95,146 96,151 104,151"></path>
+        <path fill="currentColor" d="M100,153 C90,145 72,149 64,161 C78,158 90,161 100,159 C110,161 122,158 136,161 C128,149 110,145 100,153 Z"></path>
+        <path fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" d="M82,169 Q100,183 118,169"></path>
+        <path fill="currentColor" d="M86,177 C88,191 94,201 100,203 C106,201 112,191 114,177 C106,182 94,182 86,177 Z"></path>
+      </g>
+    </defs>
+  </svg>
+
+  <!-- INICIO -->
+  <section id="inicio" style="position: relative; background: var(--paper); padding: 96px 0 0; overflow: clip">
+    <div class="drift" aria-hidden="true" style="position: absolute; inset: 0; background-image: linear-gradient(rgba(18,57,91,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(18,57,91,0.07) 1px, transparent 1px); background-size: 28px 28px"></div>
+    <svg class="twinkle" aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" style="position: absolute; top: 150px; left: 3%; color: var(--navy)"><path d="M12 0C12.8 7 17 11.2 24 12C17 12.8 12.8 17 12 24C11.2 17 7 12.8 0 12C7 11.2 11.2 7 12 0Z" fill="currentColor"></path></svg>
+    <svg class="twinkle" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" style="animation-delay: 1.1s; position: absolute; top: 200px; left: 5%; color: var(--navy3)"><path d="M12 0C12.8 7 17 11.2 24 12C17 12.8 12.8 17 12 24C11.2 17 7 12.8 0 12C7 11.2 11.2 7 12 0Z" fill="currentColor"></path></svg>
+    <svg class="twinkle" aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" style="animation-delay: 2.2s; position: absolute; top: 170px; right: 4%; color: var(--navy)"><path d="M12 0C12.8 7 17 11.2 24 12C17 12.8 12.8 17 12 24C11.2 17 7 12.8 0 12C7 11.2 11.2 7 12 0Z" fill="currentColor"></path></svg>
+
+    <div style="position: relative; max-width: 1200px; margin: 0 auto; padding: 0 32px">
+
+      <div style="container-type: inline-size; margin-top: 8px">
+        <div class="in hmeta" style="animation-delay: .1s; display: flex; justify-content: space-between; font-weight: 800; font-size: clamp(11px, 1.5cqw, 15px); letter-spacing: 0.22em; text-transform: uppercase; color: var(--navy)">
+          <span>Jorge Zambrana</span>
+          <span>Analista de datos · 2026</span>
+        </div>
+        <div style="position: relative; margin-top: 3cqw">
+          <h1 aria-label="Portfolio" style="margin: 0; display: grid; grid-template-columns: minmax(0, 1fr) 26cqw minmax(0, 1fr); font-family: 'Anton', 'Inter', sans-serif; font-weight: 400; font-size: 32cqw; line-height: 0.92; letter-spacing: 0.005em; white-space: nowrap; text-transform: uppercase; color: var(--navy)">
+            <span aria-hidden="true" style="text-align: right"><span class="spreadL" style="display: inline-block"><span class="hov drop" style="animation-delay: .1s">P</span><span class="hov drop" style="animation-delay: .2s">o</span></span></span><span aria-hidden="true"></span><span aria-hidden="true"><span class="spreadR" style="display: inline-block"><span class="hov drop" style="animation-delay: .3s">r</span><span class="hov drop" style="animation-delay: .4s">t</span></span></span>
+            <span aria-hidden="true" style="text-align: right"><span class="spreadL" style="display: inline-block"><span class="hov drop" style="animation-delay: .5s">F</span><span class="hov drop" style="animation-delay: .6s">o</span></span></span><span aria-hidden="true"></span><span aria-hidden="true"><span class="spreadR" style="display: inline-block"><span class="hov drop" style="animation-delay: .7s">l</span><span class="hov drop" style="animation-delay: .8s">i</span><span class="hov drop" style="animation-delay: .9s">o</span></span></span>
+          </h1>
+          <div class="figin" style="animation-delay: 1s; transform-origin: 50% 100%; position: absolute; left: 50%; bottom: 0; width: 24cqw; margin-left: -12cqw">
+            <div class="figscroll"><div class="bob">
+            <svg viewBox="0 0 300 740" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración de Jorge de pie, con gafas redondas, bigote y perilla, camiseta blanca ancha, pantalón negro amplio y un móvil en la mano" style="color: var(--navy); display: block; width: 100%; height: auto; overflow: visible">
+              <ellipse cx="150" cy="728" rx="132" ry="9" fill="currentColor" opacity=".13"></ellipse>
+              <g transform="translate(0 26)">
+                <path class="dp" stroke="currentColor" stroke-width="4" stroke-linejoin="round" d="M76,366 C110,378 190,378 224,366 C230,420 238,460 244,500 C250,550 256,600 260,650 L158,650 C156,590 154,520 151,462 L149,462 C146,520 144,590 142,650 L40,650 C44,600 50,550 56,500 C62,460 70,420 76,366 Z"></path>
+                <path fill="none" stroke="#ffffff" opacity=".22" stroke-width="3" stroke-linecap="round" d="M74,490 C80,530 84,580 80,630 M112,420 C110,490 114,570 118,632 M226,490 C220,530 216,580 220,630 M188,420 C190,490 186,570 182,632"></path>
+                <path class="fw" stroke="currentColor" stroke-width="4" stroke-linejoin="round" d="M36,644 L142,644 C150,660 154,678 148,688 C140,698 58,700 32,694 C22,684 28,660 36,644 Z"></path>
+                <path class="dp" stroke="currentColor" stroke-width="4" stroke-linejoin="round" d="M30,676 C60,670 104,672 150,680 C150,688 146,694 142,696 C116,702 60,702 34,696 C26,690 26,682 30,676 Z"></path>
+                <path class="dp" d="M104,644 L142,644 C148,654 150,662 150,668 L112,660 Z"></path>
+                <path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M70,654 L96,660 M64,662 L92,668"></path>
+                <path class="fw" stroke="currentColor" stroke-width="4" stroke-linejoin="round" d="M158,644 L264,644 C272,660 278,684 268,694 C242,700 160,698 152,688 C146,678 150,660 158,644 Z"></path>
+                <path class="dp" stroke="currentColor" stroke-width="4" stroke-linejoin="round" d="M270,676 C240,670 196,672 150,680 C150,688 154,694 158,696 C184,702 240,702 266,696 C274,690 274,682 270,676 Z"></path>
+                <path class="dp" d="M196,644 L158,644 C152,654 150,662 150,668 L188,660 Z"></path>
+                <path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M230,654 L204,660 M236,662 L208,668"></path>
+                <path class="sk" stroke="currentColor" stroke-width="4" stroke-linejoin="round" d="M30,280 L68,286 C74,320 82,350 92,376 L72,388 C56,360 40,322 30,280 Z"></path>
+                <path class="dp" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M78,362 Q108,372 102,410 L90,402 Q94,382 78,376 Z"></path>
+                <path class="fw" stroke="currentColor" stroke-width="4" stroke-linejoin="round" d="M118,156 C130,172 170,172 182,156 L228,168 C248,174 264,184 272,198 L286,282 C270,292 250,292 234,288 L230,262 C232,300 234,340 232,376 C196,388 104,388 68,376 C66,340 68,300 70,262 L66,288 C50,292 30,292 14,282 L28,198 C36,184 52,174 72,168 Z"></path>
+                <path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M120,158 C132,176 168,176 180,158"></path>
+                <path fill="none" stroke="currentColor" opacity=".35" stroke-width="3" stroke-linecap="round" d="M88,300 C96,330 94,350 90,372 M210,290 C206,320 210,350 214,372 M140,250 C150,262 160,262 168,252"></path>
+                <path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" d="M84,212 C88,206 94,204 100,208 M92,226 L100,218"></path>
+                <path class="sk" stroke="currentColor" stroke-width="4" stroke-linejoin="round" d="M130,126 L131,160 C140,172 160,172 169,160 L170,126 Z"></path>
+                <path class="sk" stroke="currentColor" stroke-width="4" stroke-linejoin="round" d="M240,292 C256,290 268,288 276,284 C262,262 240,236 222,216 L206,236 C216,252 230,274 240,292 Z"></path>
+                <g transform="rotate(-10 196 212)">
+                  <rect x="178" y="178" width="40" height="70" rx="7" fill="#d9e0ea" stroke="currentColor" stroke-width="4"></rect>
+                  <rect x="183" y="183" width="14" height="14" rx="4" fill="currentColor" opacity=".85"></rect>
+                  <circle cx="190" cy="190" r="3" fill="#d9e0ea"></circle>
+                </g>
+                <path class="sk" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M178,232 C170,236 168,246 176,250 C184,254 196,246 206,236 M222,214 C230,210 234,218 228,226"></path>
+              </g>
+              <use href="#jz-head" transform="translate(63 2) scale(.87)"></use>
+            </svg>
+            </div></div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="in" style="animation-delay: 1.3s; display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; padding: 40px 0 64px">
+        <a class="btn-solid" href="#proyectos" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 28px; background: var(--navy); color: #ffffff; font-weight: 700; font-size: 16px; border-radius: 999px; border: 2px solid var(--navy); transition: transform .2s ease">Ver proyectos</a>
+        <a class="btn-ghost" href="#contacto" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 28px; background: transparent; color: var(--navy); font-weight: 700; font-size: 16px; border-radius: 999px; border: 2px solid var(--navy); transition: background .2s ease, color .2s ease">Contactar</a>
+      </div>
+    </div>
+
+    <!-- borde de papel rasgado -->
+    <div style="position: relative">
+      <svg aria-hidden="true" viewBox="0 0 1200 44" preserveAspectRatio="none" style="display: block; width: 100%; height: 40px; margin-bottom: -1px">
+        <path style="fill: var(--navy3)" d="M0,44 L0,20 L36,8 L70,24 L104,6 L140,18 L178,4 L214,22 L250,10 L290,26 L326,8 L364,20 L402,2 L440,18 L478,8 L516,24 L554,6 L592,20 L630,4 L668,22 L706,8 L744,24 L782,6 L820,20 L858,8 L896,26 L934,6 L972,20 L1010,4 L1048,22 L1086,10 L1124,24 L1160,8 L1200,18 L1200,44 Z"></path>
+        <path style="fill: var(--navy)" d="M0,44 L0,30 L28,18 L64,32 L98,16 L136,30 L170,14 L208,32 L246,18 L284,34 L322,18 L360,30 L396,14 L436,30 L474,18 L512,34 L550,16 L588,30 L626,14 L664,32 L702,18 L740,34 L778,16 L816,30 L854,18 L892,34 L930,16 L968,30 L1006,14 L1044,32 L1082,20 L1120,34 L1156,18 L1200,28 L1200,44 Z"></path>
+      </svg>
+      <p style="margin: 0; padding: 14px 32px 30px; background: var(--navy); text-align: center; font-size: 13px; font-weight: 700; letter-spacing: 0.24em; line-height: 1.9; text-transform: uppercase; color: #ffffff">Analista de datos · Python · SQL · Data storytelling</p>
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section id="sobre-mi" style="position: relative; background: var(--navy); color: #ffffff; padding: 72px 32px 120px; overflow: clip">
+    <div class="float" aria-hidden="true" style="position: absolute; left: -110px; bottom: -110px; width: 300px; height: 300px; border-radius: 50%; background: var(--navy2); opacity: .5"></div>
+
+    <div style="position: relative; max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 56px 64px">
+      <div class="slideL" style="flex: 3 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+        <h2 class="maskup" style="margin: 0; overflow: clip; padding-bottom: 0.1em; font-size: clamp(48px, 7vw, 96px); font-weight: 800; letter-spacing: -0.04em; line-height: 0.95; color: #ffffff"><span>Sobre mí</span></h2>
+        <svg aria-hidden="true" width="170" height="60" viewBox="0 0 170 70" style="color: var(--navy3)"><path d="M4 8C40 70 110 74 160 30" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path><path d="M146 24L162 30L152 44" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        <div style="display: flex; flex-direction: column; gap: 20px; font-size: 18px; line-height: 1.7; color: #dce6ef">
+          <p style="margin: 0">Analista de Datos Junior, con formación en Administración de Sistemas Informáticos en Red y un enfoque en herramientas de análisis y visualización de datos.</p>
+          <p style="margin: 0">Me caracterizo por mi capacidad de trabajo en equipo, adaptabilidad y aprendizaje continuo. Afronto los retos de forma proactiva y resiliente, buscando dar siempre el máximo y aportando soluciones eficientes.</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px">
+          <span style="padding: 10px 18px; border: 1.5px solid #7fa3c4; border-radius: 999px; font-size: 14px; font-weight: 600; color: #ffffff">Alhaurín de la Torre, Málaga</span>
+          <span style="padding: 10px 18px; border: 1.5px solid #7fa3c4; border-radius: 999px; font-size: 14px; font-weight: 600; color: #ffffff">Español · Inglés (competencia básica profesional)</span>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px 28px; padding-top: 12px">
+          <span style="font-family: 'Caveat', cursive; font-weight: 700; font-size: 32px; line-height: 1; padding-top: 14px; color: #ffffff">Herramientas:</span>
+          <div style="display: flex; flex-wrap: wrap; gap: 16px">
+            
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 8px">
+                <span class="tool" style="display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; border: 2px solid #ffffff; border-radius: 14px; font-size: 17px; font-weight: 800; color: #ffffff; transition: transform .2s ease">Py</span>
+                <span style="font-size: 12px; font-weight: 600; color: #b9cde0">Python</span>
+              </div>
+            
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 8px">
+                <span class="tool" style="display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; border: 2px solid #ffffff; border-radius: 14px; font-size: 17px; font-weight: 800; color: #ffffff; transition: transform .2s ease">Pd</span>
+                <span style="font-size: 12px; font-weight: 600; color: #b9cde0">Pandas</span>
+              </div>
+            
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 8px">
+                <span class="tool" style="display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; border: 2px solid #ffffff; border-radius: 14px; font-size: 17px; font-weight: 800; color: #ffffff; transition: transform .2s ease">My</span>
+                <span style="font-size: 12px; font-weight: 600; color: #b9cde0">MySQL</span>
+              </div>
+            
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 8px">
+                <span class="tool" style="display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; border: 2px solid #ffffff; border-radius: 14px; font-size: 17px; font-weight: 800; color: #ffffff; transition: transform .2s ease">Pg</span>
+                <span style="font-size: 12px; font-weight: 600; color: #b9cde0">PostgreSQL</span>
+              </div>
+            
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 8px">
+                <span class="tool" style="display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; border: 2px solid #ffffff; border-radius: 14px; font-size: 17px; font-weight: 800; color: #ffffff; transition: transform .2s ease">AWS</span>
+                <span style="font-size: 12px; font-weight: 600; color: #b9cde0">AWS</span>
+              </div>
+            
+          </div>
+        </div>
+        <div style="padding-top: 12px">
+          <a class="pillink" href="https://www.linkedin.com/in/jorge-zambrana-castillo-91a032280" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 28px; background: var(--paper); color: var(--navy); font-weight: 800; font-size: 16px; border-radius: 999px; transition: transform .2s ease">Ver mi LinkedIn →</a>
+        </div>
+      </div>
+
+      <div class="slideR" style="flex: 2 1 340px; min-width: 0; max-width: 480px; position: relative; margin: 0 auto">
+        <div style="background: var(--paper); border-radius: 240px 240px 16px 16px; padding: 56px 28px 0; overflow: clip; box-shadow: 10px 12px 0 var(--deep)">
+          <svg class="draw" viewBox="0 0 460 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Boceto a lápiz de Jorge, con gafas redondas, flequillo, bigote, perilla, camisa de rayas y un collar de cuentas" style="color: var(--navy); display: block; width: 100%; height: auto">
+            <defs>
+              <filter id="jz-pencil" x="-5%" y="-5%" width="110%" height="110%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"></feTurbulence>
+                <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2"></feDisplacementMap>
+              </filter>
+            </defs>
+            <g filter="url(#jz-pencil)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="214" cy="196" r="134" stroke-width="1.6" opacity=".28"></circle>
+              <circle cx="220" cy="200" r="138" stroke-width="1.2" opacity=".18"></circle>
+              <path d="M208,52 C203,140 216,250 226,338" stroke-width="1.6" opacity=".3"></path>
+              <path d="M86,186 C170,176 262,176 346,190" stroke-width="1.6" opacity=".3"></path>
+              <path d="M110,262 C180,268 260,268 330,258" stroke-width="1.4" opacity=".22"></path>
+              <path d="M122,206 C104,200 98,232 118,252 M121,214 C112,214 110,232 120,242" stroke-width="2.4" opacity=".85"></path>
+              <path d="M312,206 C330,200 336,232 316,250 M313,214 C322,214 324,232 314,242" stroke-width="2.4" opacity=".85"></path>
+              <path d="M122,170 C114,262 152,332 212,348 C272,338 310,268 312,186" stroke-width="3" opacity=".9"></path>
+              <path d="M126,178 C120,258 156,322 212,342 C268,332 304,264 306,190" stroke-width="1.6" opacity=".5"></path>
+              <path d="M112,196 C84,120 128,50 214,46 C300,44 346,116 316,196 C314,168 306,148 296,138 C262,134 222,146 190,140 C160,152 132,162 118,152 C114,168 112,182 112,196 Z" fill="currentColor" stroke="none" opacity=".24"></path>
+              <path d="M150,96 C170,84 190,82 206,86 M232,84 C254,82 276,90 292,104 M130,128 C150,114 172,110 190,112 M246,110 C268,108 290,116 304,130" stroke-width="3" opacity=".5"></path>
+              <path d="M112,196 C84,120 128,50 214,46 C300,44 346,116 316,196 C314,168 306,148 296,136" stroke-width="3.2" opacity=".92"></path>
+              <path d="M118,150 C132,160 160,150 190,138 C222,146 262,134 296,140" stroke-width="3" opacity=".9"></path>
+              <path d="M124,160 C150,176 190,150 214,150 C246,154 270,148 300,150" stroke-width="2" opacity=".6"></path>
+              <path d="M196,50 C186,28 208,16 226,28 C214,30 212,42 220,50" stroke-width="3" opacity=".9"></path>
+              <path d="M150,70 C176,58 206,56 232,60 M138,90 C170,72 220,70 262,76 M128,112 C170,92 240,90 296,104 M120,134 C130,120 150,112 170,108 M240,66 C276,74 304,94 314,120 M214,52 C206,74 200,96 190,120 M232,54 C240,76 248,98 258,120" stroke-width="2" opacity=".65"></path>
+              <path d="M128,184 C146,172 168,170 192,180 M236,178 C258,168 282,170 298,182" stroke-width="5" opacity=".92"></path>
+              <ellipse cx="164" cy="206" rx="6" ry="8" fill="currentColor" stroke="none" opacity=".92"></ellipse>
+              <ellipse cx="268" cy="204" rx="6" ry="8" fill="currentColor" stroke="none" opacity=".92"></ellipse>
+              <circle cx="164" cy="208" r="42" stroke-width="3.2" opacity=".92"></circle>
+              <circle cx="166" cy="209" r="42" stroke-width="1.4" opacity=".45"></circle>
+              <circle cx="268" cy="206" r="42" stroke-width="3.2" opacity=".92"></circle>
+              <circle cx="270" cy="207" r="42" stroke-width="1.4" opacity=".45"></circle>
+              <path d="M205,198 C214,190 222,190 228,198" stroke-width="3" opacity=".9"></path>
+              <path d="M122,204 L112,200 M310,202 L324,198" stroke-width="3" opacity=".9"></path>
+              <path d="M142,190 C150,184 160,182 170,184 M246,188 C254,182 264,180 272,182" stroke-width="1.6" opacity=".4"></path>
+              <path d="M216,226 C208,246 210,260 222,262 M214,226 C206,250 210,262 224,264" stroke-width="2.2" opacity=".75"></path>
+              <path d="M220,272 C200,256 170,260 154,282 C182,276 202,282 220,278 C240,282 262,276 288,284 C270,260 240,256 220,272 Z" fill="currentColor" stroke-width="2" opacity=".9"></path>
+              <path d="M182,296 C204,318 244,318 262,292" stroke-width="3" opacity=".9"></path>
+              <path d="M190,308 C206,326 246,326 258,306" stroke-width="1.4" opacity=".4"></path>
+              <path d="M194,312 C196,334 208,348 220,350 C232,348 242,332 244,312 C232,320 208,320 194,312 Z" fill="currentColor" stroke-width="2" opacity=".9"></path>
+              <path d="M150,300 C162,326 182,344 206,352 M290,296 C280,324 260,342 238,352" stroke-width="1.6" opacity=".5"></path>
+              <path d="M140,262 C148,296 164,322 188,340 M300,258 C292,292 276,318 250,338" stroke-width="1.2" opacity=".35"></path>
+              <path d="M178,340 C176,372 172,394 160,412 M264,338 C268,372 272,394 286,412" stroke-width="2.6" opacity=".85"></path>
+              <path d="M184,352 C182,376 180,392 172,404 M258,350 C262,376 264,392 274,404" stroke-width="1.2" opacity=".4"></path>
+              <path d="M160,412 C118,422 66,444 34,500 M286,412 C332,420 384,444 424,500" stroke-width="3" opacity=".9"></path>
+              <path d="M176,372 L198,444 L150,466 L126,420 Z M264,372 L244,444 L294,470 L314,422 Z" stroke-width="2.8" opacity=".9"></path>
+              <path d="M198,444 Q222,474 244,444" stroke-width="2.6" opacity=".85"></path>
+              <path d="M60,470 C80,452 104,440 126,432 M82,500 C100,478 118,462 140,452 M330,452 C352,456 374,470 392,490 M312,470 C332,474 350,486 362,500" stroke-width="1.8" opacity=".5"></path>
+              <path d="M100,452 L84,500 M120,442 L108,500 M140,434 L134,500 M160,426 L158,500 M312,438 L326,500 M334,446 L350,500 M356,456 L374,500 M292,478 L300,500 M270,484 L274,500" stroke-width="2" opacity=".55"></path>
+              <path d="M138,424 L150,462 M156,416 L170,450 M296,426 L286,458 M314,426 L300,462" stroke-width="1.6" opacity=".5"></path>
+              <g fill="#ffffff" stroke-width="2" opacity=".95">
+                <circle cx="190" cy="376" r="5"></circle><circle cx="196" cy="391" r="5"></circle><circle cx="203" cy="403" r="5"></circle><circle cx="209" cy="412" r="5"></circle><circle cx="216" cy="417" r="5"></circle><circle cx="222" cy="419" r="5"></circle><circle cx="228" cy="417" r="5"></circle><circle cx="235" cy="412" r="5"></circle><circle cx="241" cy="403" r="5"></circle><circle cx="248" cy="391" r="5"></circle><circle cx="254" cy="376" r="5"></circle>
+              </g>
+              <path d="M296,236 L310,252 M292,252 L306,268 M286,268 L300,284 M278,284 L292,300 M268,300 L282,316 M256,314 L270,330" stroke-width="1.4" opacity=".4"></path>
+              <path d="M126,330 L140,340 M138,346 L152,356" stroke-width="1.2" opacity=".3"></path>
+            </g>
+          </svg>
+        </div>
+        <div class="popview" aria-hidden="true" style="position: absolute; top: 26px; right: -16px; transform: rotate(7deg); background: #ffffff; color: var(--navy); font-family: 'Caveat', cursive; font-weight: 700; font-size: 30px; line-height: 1; padding: 12px 20px; border-radius: 4px; box-shadow: 4px 6px 0 var(--deep)"><span class="wave" style="display: inline-block">¡Hola!</span></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FORMACIÓN Y EXPERIENCIA -->
+  <section id="trayectoria" style="position: relative; background-color: var(--paper); background-image: linear-gradient(rgba(18,57,91,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(18,57,91,0.07) 1px, transparent 1px); background-size: 28px 28px; padding: 96px 32px 128px">
+    <div style="max-width: 1100px; margin: 0 auto">
+
+      <h2 class="reveal" style="margin: 0 0 72px; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center; font-weight: 800; font-size: clamp(40px, 5.5vw, 76px); letter-spacing: -0.03em; line-height: 1.05; color: var(--navy)">
+        <span style="display: block; padding: 0 24px">Formación y experiencia</span>
+        <span class="growview" aria-hidden="true" style="display: block; width: min(460px, 80%); height: 24px; background: var(--navy); transform-origin: center"></span>
+      </h2>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 56px 48px; align-items: flex-start">
+        <div class="sheet slideL" style="position: relative; flex: 1 1 380px; min-width: 0; background: #ffffff; padding: 56px 36px 44px; box-shadow: 8px 10px 0 var(--navy3); transform: rotate(-0.8deg)">
+          <svg aria-hidden="true" width="30" height="64" viewBox="0 0 30 64" style="position: absolute; top: -26px; left: 36px; color: var(--navy2)"><path d="M8 40V12a7 7 0 0114 0v40a5 5 0 01-10 0V16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path></svg>
+          <p style="margin: 0 0 28px; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #3d5870">Estudios</p>
+          <div style="display: flex; flex-direction: column; border-left: 3px solid var(--tile); padding-left: 28px; gap: 36px">
+            
+              <div class="timeline-item" style="position: relative">
+                <span class="dot" style="position: absolute; left: -38px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: #ffffff; border: 3px solid var(--navy); box-sizing: border-box; transition: background .2s ease"></span>
+                <p style="margin: 0 0 4px; font-size: 14px; font-weight: 700; color: #3d5870">Sep 2026 – Actualidad</p>
+                <h3 style="margin: 0 0 4px; font-size: 22px; font-weight: 800; line-height: 1.25; color: var(--navy)">Curso de Especialización en Desarrollo de Aplicaciones en Lenguaje Python</h3>
+                <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #2a465f">CPIFP Alan Turing (Málaga Tech Park)</p>
+              </div>
+            
+              <div class="timeline-item" style="position: relative">
+                <span class="dot" style="position: absolute; left: -38px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: #ffffff; border: 3px solid var(--navy); box-sizing: border-box; transition: background .2s ease"></span>
+                <p style="margin: 0 0 4px; font-size: 14px; font-weight: 700; color: #3d5870">Sep 2023 – Jun 2025</p>
+                <h3 style="margin: 0 0 4px; font-size: 22px; font-weight: 800; line-height: 1.25; color: var(--navy)">CFGS en Administración de Sistemas Informáticos en Red</h3>
+                <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #2a465f">CPIFP Alan Turing (Málaga Tech Park)</p>
+              </div>
+            
+              <div class="timeline-item" style="position: relative">
+                <span class="dot" style="position: absolute; left: -38px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: #ffffff; border: 3px solid var(--navy); box-sizing: border-box; transition: background .2s ease"></span>
+                <p style="margin: 0 0 4px; font-size: 14px; font-weight: 700; color: #3d5870">Certificados</p>
+                <h3 style="margin: 0 0 4px; font-size: 22px; font-weight: 800; line-height: 1.25; color: var(--navy)">Python Data Analyst · Data Storytelling · Introduce to UI Design</h3>
+                <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #2a465f">Formación complementaria</p>
+              </div>
+            
+          </div>
+        </div>
+
+        <div class="sheet slideR" style="position: relative; flex: 1 1 380px; min-width: 0; background: #ffffff; padding: 56px 36px 44px; box-shadow: 8px 10px 0 var(--navy); transform: rotate(0.8deg)">
+          <svg aria-hidden="true" width="30" height="64" viewBox="0 0 30 64" style="position: absolute; top: -26px; right: 36px; color: var(--navy2)"><path d="M8 40V12a7 7 0 0114 0v40a5 5 0 01-10 0V16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path></svg>
+          <p style="margin: 0 0 28px; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #3d5870">Trayectoria profesional</p>
+          <div style="display: flex; flex-direction: column; border-left: 3px solid var(--tile); padding-left: 28px; gap: 36px">
+            
+              <div class="timeline-item" style="position: relative">
+                <span class="dot" style="position: absolute; left: -38px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: #ffffff; border: 3px solid var(--navy); box-sizing: border-box; transition: background .2s ease"></span>
+                <p style="margin: 0 0 4px; font-size: 14px; font-weight: 700; color: #3d5870">Mar 2025 – Jun 2025</p>
+                <h3 style="margin: 0 0 4px; font-size: 22px; font-weight: 800; line-height: 1.25; color: var(--navy)">Prácticas como Técnico Auxiliar de Informática</h3>
+                <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #2a465f">Servicio Municipal de Aguas</p>
+                <ul style="margin: 14px 0 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 16px; line-height: 1.55; color: #2a465f">
+                  
+                    <li>Desarrollo de una aplicación web multifuncional para la gestión interna del servicio, con módulos de partes de trabajo, visitas técnicas y sustituciones de material.</li>
+                  
+                    <li>Diseño y ejecución de consultas en bases de datos MySQL con información de usuarios, contratos y sistemas heredados.</li>
+                  
+                    <li>Integración y tratamiento de datos de múltiples fuentes, como referencias catastrales y datos de clientes.</li>
+                  
+                    <li>Unificación y limpieza de datos entre tablas heterogéneas para su explotación en la aplicación.</li>
+                  
+                    <li>Colaboración con personal técnico para adaptar los datos a necesidades operativas.</li>
+                  
+                </ul>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" style="position: relative; background: var(--navy); color: #ffffff; padding: 104px 32px 128px; overflow: clip">
+    <div class="float" aria-hidden="true" style="position: absolute; left: -150px; bottom: -150px; width: 380px; height: 380px; border-radius: 50%; background: var(--navy2); opacity: .5"></div>
+
+    <div style="position: relative; max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 72px">
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 32px 48px">
+        <div class="reveal" style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 20px">
+          <h2 class="maskup" style="margin: 0; overflow: clip; padding-bottom: 0.1em; font-size: clamp(48px, 7vw, 96px); font-weight: 800; letter-spacing: -0.04em; line-height: 0.95; color: #ffffff"><span>Skills</span></h2>
+          <p style="margin: 0; max-width: 440px; font-family: 'Caveat', cursive; font-weight: 700; font-size: 32px; line-height: 1.15; color: #dce6ef">Datos limpios, análisis claros y una buena historia que contar.</p>
+        </div>
+        <div style="position: relative; flex: none; width: min(320px, 100%); aspect-ratio: 1; margin: 0 auto">
+          <svg class="ring" aria-hidden="true" viewBox="0 0 100 100" style="position: absolute; inset: -9%; width: 118%; height: 118%; color: var(--navy3)"><circle cx="50" cy="50" r="48.5" fill="none" stroke="currentColor" stroke-width=".5" stroke-dasharray="1.5 2.5" stroke-linecap="round"></circle><circle cx="50" cy="1.5" r="1.6" fill="#7fb2e0"></circle></svg>
+          <div class="circview" style="position: absolute; inset: 0; border-radius: 50%; background: var(--paper); overflow: clip; box-shadow: 10px 12px 0 var(--deep)">
+          <div class="bustview" style="position: absolute; left: 6%; right: 6%; bottom: -4%">
+            <svg viewBox="0 0 320 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración de Jorge trabajando con su portátil" style="color: var(--navy); display: block; width: 100%; height: auto">
+              <path class="fw" stroke="currentColor" stroke-width="4" stroke-linejoin="round" d="M146,134 C152,148 168,148 174,134 L226,146 C250,154 266,172 272,196 L290,236 C278,246 262,248 250,244 L244,230 L252,340 L68,340 L76,230 L70,244 C58,248 42,246 30,236 L48,196 C54,172 70,154 94,146 Z"></path>
+              <path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M148,136 C156,152 166,152 172,136"></path>
+              <path fill="none" stroke="currentColor" opacity=".35" stroke-width="3" stroke-linecap="round" d="M96,200 C102,226 100,246 96,262 M224,200 C220,226 224,246 228,262"></path>
+              <path class="sk" stroke="currentColor" stroke-width="4" stroke-linejoin="round" d="M142,108 L143,140 C150,152 170,152 177,140 L178,108 Z"></path>
+              <path class="sk" stroke="currentColor" stroke-width="4" stroke-linejoin="round" d="M42,238 L72,246 C80,258 92,268 108,276 L96,296 C72,286 52,266 42,238 Z"></path>
+              <path class="sk" stroke="currentColor" stroke-width="4" stroke-linejoin="round" d="M278,238 L248,246 C240,258 228,268 212,276 L224,296 C248,286 268,266 278,238 Z"></path>
+              <rect x="62" y="268" width="196" height="100" rx="9" fill="#d9e0ea" stroke="currentColor" stroke-width="4"></rect>
+              <circle cx="160" cy="318" r="19" fill="currentColor"></circle>
+              <path fill="#ffffff" d="M150,328 L150,318 L155,318 L155,328 Z M158,328 L158,310 L163,310 L163,328 Z M166,328 L166,314 L171,314 L171,328 Z"></path>
+              <path class="sk" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M96,292 C94,278 106,268 118,272 C124,280 122,290 112,298 Z"></path>
+              <path class="sk" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M224,292 C226,278 214,268 202,272 C196,280 198,290 208,298 Z"></path>
+              <use href="#jz-head" transform="translate(98 -4) scale(.62)"></use>
+            </svg>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div style="width: 100%; display: flex; flex-wrap: wrap; gap: 48px 64px">
+        
+          <div class="reveal" style="flex: 1 1 280px; min-width: 0">
+            <h3 style="margin: 0 0 20px; padding-bottom: 14px; border-bottom: 2px solid #4f7597; font-size: 14px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #b9cde0">Bases de datos</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 12px">
+              
+                <span class="chip" style="padding: 11px 20px; background: transparent; border: 2px solid #ffffff; border-radius: 999px; font-size: 16px; font-weight: 600; color: #ffffff; transition: background .2s ease, color .2s ease">MySQL</span>
+              
+                <span class="chip" style="padding: 11px 20px; background: transparent; border: 2px solid #ffffff; border-radius: 999px; font-size: 16px; font-weight: 600; color: #ffffff; transition: background .2s ease, color .2s ease">PostgreSQL</span>
+              
+            </div>
+          </div>
+        
+          <div class="reveal" style="flex: 1 1 280px; min-width: 0">
+            <h3 style="margin: 0 0 20px; padding-bottom: 14px; border-bottom: 2px solid #4f7597; font-size: 14px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #b9cde0">Análisis de datos</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 12px">
+              
+                <span class="chip" style="padding: 11px 20px; background: transparent; border: 2px solid #ffffff; border-radius: 999px; font-size: 16px; font-weight: 600; color: #ffffff; transition: background .2s ease, color .2s ease">Python</span>
+              
+                <span class="chip" style="padding: 11px 20px; background: transparent; border: 2px solid #ffffff; border-radius: 999px; font-size: 16px; font-weight: 600; color: #ffffff; transition: background .2s ease, color .2s ease">Pandas</span>
+              
+                <span class="chip" style="padding: 11px 20px; background: transparent; border: 2px solid #ffffff; border-radius: 999px; font-size: 16px; font-weight: 600; color: #ffffff; transition: background .2s ease, color .2s ease">Data Storytelling</span>
+              
+            </div>
+          </div>
+        
+          <div class="reveal" style="flex: 1 1 280px; min-width: 0">
+            <h3 style="margin: 0 0 20px; padding-bottom: 14px; border-bottom: 2px solid #4f7597; font-size: 14px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #b9cde0">Cloud</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 12px">
+              
+                <span class="chip" style="padding: 11px 20px; background: transparent; border: 2px solid #ffffff; border-radius: 999px; font-size: 16px; font-weight: 600; color: #ffffff; transition: background .2s ease, color .2s ease">AWS</span>
+              
+            </div>
+          </div>
+        
+      </div>
+
+      <div>
+        <h3 style="margin: 0 0 36px; font-size: 14px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #b9cde0">Cómo trabajo con los datos</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 40px 32px">
+          
+            <div class="reveal" style="flex: 1 1 200px; min-width: 0">
+              <div style="position: relative; height: 2px; background: var(--navy3); margin-bottom: 20px">
+                <span aria-hidden="true" style="position: absolute; left: 0; top: -6px; width: 14px; height: 14px; border-radius: 50%; background: #ffffff"></span>
+              </div>
+              <p style="margin: 0 0 6px; font-size: 14px; font-weight: 800; letter-spacing: 0.1em; color: #b9cde0">01</p>
+              <p style="margin: 0 0 8px; font-size: 22px; font-weight: 800; color: #ffffff">Entender</p>
+              <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #dce6ef">Definir la pregunta y el contexto antes de tocar los datos.</p>
+            </div>
+          
+            <div class="reveal" style="flex: 1 1 200px; min-width: 0">
+              <div style="position: relative; height: 2px; background: var(--navy3); margin-bottom: 20px">
+                <span aria-hidden="true" style="position: absolute; left: 0; top: -6px; width: 14px; height: 14px; border-radius: 50%; background: #ffffff"></span>
+              </div>
+              <p style="margin: 0 0 6px; font-size: 14px; font-weight: 800; letter-spacing: 0.1em; color: #b9cde0">02</p>
+              <p style="margin: 0 0 8px; font-size: 22px; font-weight: 800; color: #ffffff">Limpiar</p>
+              <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #dce6ef">Integrar y depurar fuentes distintas hasta tener datos fiables.</p>
+            </div>
+          
+            <div class="reveal" style="flex: 1 1 200px; min-width: 0">
+              <div style="position: relative; height: 2px; background: var(--navy3); margin-bottom: 20px">
+                <span aria-hidden="true" style="position: absolute; left: 0; top: -6px; width: 14px; height: 14px; border-radius: 50%; background: #ffffff"></span>
+              </div>
+              <p style="margin: 0 0 6px; font-size: 14px; font-weight: 800; letter-spacing: 0.1em; color: #b9cde0">03</p>
+              <p style="margin: 0 0 8px; font-size: 22px; font-weight: 800; color: #ffffff">Analizar</p>
+              <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #dce6ef">Explorar y contrastar con Python, Pandas y SQL.</p>
+            </div>
+          
+            <div class="reveal" style="flex: 1 1 200px; min-width: 0">
+              <div style="position: relative; height: 2px; background: var(--navy3); margin-bottom: 20px">
+                <span aria-hidden="true" style="position: absolute; left: 0; top: -6px; width: 14px; height: 14px; border-radius: 50%; background: #ffffff"></span>
+              </div>
+              <p style="margin: 0 0 6px; font-size: 14px; font-weight: 800; letter-spacing: 0.1em; color: #b9cde0">04</p>
+              <p style="margin: 0 0 8px; font-size: 22px; font-weight: 800; color: #ffffff">Contar</p>
+              <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #dce6ef">Visualizar y comunicar los resultados con claridad.</p>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" style="position: relative; background: var(--paper); padding: 112px 32px 128px; overflow: clip">
+    <div class="float" aria-hidden="true" style="position: absolute; right: -70px; top: -70px; width: 260px; height: 260px; border-radius: 50%; background: var(--navy)"></div>
+    <div style="position: relative; max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 64px">
+      <div class="reveal" style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px 32px">
+        <h2 class="maskup" style="margin: 0; overflow: clip; padding-bottom: 0.1em; font-size: clamp(44px, 6vw, 80px); font-weight: 800; letter-spacing: -0.03em; line-height: 1; color: #000000"><span>Proyectos</span></h2>
+        <p style="margin: 0; max-width: 360px; padding: 14px 18px; background: var(--paper); font-size: 17px; line-height: 1.55; font-weight: 500; color: #2a465f">Tres análisis de datos en preparación, con su documentación en Notion.</p>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 32px">
+        
+          <article class="card reveal" style="position: relative; flex: 1 1 440px; min-width: 0; background: #ffffff; border-radius: 20px; overflow: clip; display: flex; flex-direction: column">
+            <div style="position: relative">
+              <svg viewBox="0 0 600 240" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="display: block; width: 100%; height: 240px; color: var(--navy)"><use href="#cover-01"></use></svg>
+              <span style="position: absolute; top: 16px; left: 16px; width: 44px; height: 44px; border-radius: 50%; background: var(--deep); color: #ffffff; display: inline-flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 800">01</span>
+              <span style="position: absolute; top: 16px; right: 16px; display: inline-flex; align-items: center; padding: 8px 16px; border-radius: 999px; background: var(--navy); color: #ffffff; font-size: 13px; font-weight: 700"><span class="pdot" aria-hidden="true"></span>Próximamente</span>
+            </div>
+            <div style="padding: 28px; display: flex; flex-direction: column; gap: 14px; flex: 1">
+              <p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #3d5870">Análisis económico</p>
+              <h3 style="margin: 0; font-size: 26px; font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; color: var(--navy)">Accesibilidad al alquiler en España</h3>
+              <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #2a465f; flex: 1">Análisis de si el precio del alquiler evoluciona más rápido que la renta de los hogares y de las diferencias entre territorios.</p>
+              <dl style="margin: 0; padding-top: 18px; border-top: 2px solid var(--tile); display: flex; flex-direction: column; gap: 12px">
+                
+                  <div style="display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 15px; line-height: 1.5">
+                    <dt style="flex: none; width: 108px; font-weight: 800; color: var(--navy)">Datos</dt>
+                    <dd style="margin: 0; flex: 1 1 200px; min-width: 0; color: #2a465f">INE (precios del alquiler y renta de los hogares) y, como ampliación, AEAT</dd>
+                  </div>
+                
+                  <div style="display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 15px; line-height: 1.5">
+                    <dt style="flex: none; width: 108px; font-weight: 800; color: var(--navy)">Herramientas</dt>
+                    <dd style="margin: 0; flex: 1 1 200px; min-width: 0; color: #2a465f">Python · Pandas · Matplotlib / Seaborn</dd>
+                  </div>
+                
+                  <div style="display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 15px; line-height: 1.5">
+                    <dt style="flex: none; width: 108px; font-weight: 800; color: var(--navy)">Resultado</dt>
+                    <dd style="margin: 0; flex: 1 1 200px; min-width: 0; color: #2a465f">Gráficos de evolución, comparativas territoriales y un dashboard opcional</dd>
+                  </div>
+                
+              </dl>
+              <a class="nlink" href="https://app.notion.com/p/Proyecto-1-Accesibilidad-al-alquiler-en-Espa-a-405eb6a2c81580388024ec88e66fcd7e" target="_blank" rel="noopener noreferrer" aria-label="Ver Accesibilidad al alquiler en España en Notion">Ver en Notion <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        
+          <article class="card reveal" style="position: relative; flex: 1 1 440px; min-width: 0; background: #ffffff; border-radius: 20px; overflow: clip; display: flex; flex-direction: column">
+            <div style="position: relative">
+              <svg viewBox="0 0 600 240" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="display: block; width: 100%; height: 240px; color: var(--navy)"><use href="#cover-02"></use></svg>
+              <span style="position: absolute; top: 16px; left: 16px; width: 44px; height: 44px; border-radius: 50%; background: var(--deep); color: #ffffff; display: inline-flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 800">02</span>
+              <span style="position: absolute; top: 16px; right: 16px; display: inline-flex; align-items: center; padding: 8px 16px; border-radius: 999px; background: var(--navy); color: #ffffff; font-size: 13px; font-weight: 700"><span class="pdot" aria-hidden="true"></span>Próximamente</span>
+            </div>
+            <div style="padding: 28px; display: flex; flex-direction: column; gap: 14px; flex: 1">
+              <p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #3d5870">Análisis exploratorio</p>
+              <h3 style="margin: 0; font-size: 26px; font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; color: var(--navy)">Desigualdad educativa: resultados PISA</h3>
+              <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #2a465f; flex: 1">Estudio de cómo varían los resultados educativos entre países y su relación con factores socioeconómicos.</p>
+              <dl style="margin: 0; padding-top: 18px; border-top: 2px solid var(--tile); display: flex; flex-direction: column; gap: 12px">
+                
+                  <div style="display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 15px; line-height: 1.5">
+                    <dt style="flex: none; width: 108px; font-weight: 800; color: var(--navy)">Datos</dt>
+                    <dd style="margin: 0; flex: 1 1 200px; min-width: 0; color: #2a465f">Informes y bases de datos de PISA (OCDE)</dd>
+                  </div>
+                
+                  <div style="display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 15px; line-height: 1.5">
+                    <dt style="flex: none; width: 108px; font-weight: 800; color: var(--navy)">Herramientas</dt>
+                    <dd style="margin: 0; flex: 1 1 200px; min-width: 0; color: #2a465f">Python · Pandas · Visualización</dd>
+                  </div>
+                
+                  <div style="display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 15px; line-height: 1.5">
+                    <dt style="flex: none; width: 108px; font-weight: 800; color: var(--navy)">Resultado</dt>
+                    <dd style="margin: 0; flex: 1 1 200px; min-width: 0; color: #2a465f">Rankings, comparativas entre países y análisis de brechas educativas</dd>
+                  </div>
+                
+              </dl>
+              <a class="nlink" href="https://app.notion.com/p/Proyecto-2-Desigualdad-educativa-Resultados-PISA-405eb6a2c81580bea1bbfae528026811" target="_blank" rel="noopener noreferrer" aria-label="Ver Desigualdad educativa: resultados PISA en Notion">Ver en Notion <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        
+          <article class="card reveal" style="position: relative; flex: 1 1 440px; min-width: 0; background: #ffffff; border-radius: 20px; overflow: clip; display: flex; flex-direction: column">
+            <div style="position: relative">
+              <svg viewBox="0 0 600 240" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="display: block; width: 100%; height: 240px; color: var(--navy)"><use href="#cover-03"></use></svg>
+              <span style="position: absolute; top: 16px; left: 16px; width: 44px; height: 44px; border-radius: 50%; background: var(--deep); color: #ffffff; display: inline-flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 800">03</span>
+              <span style="position: absolute; top: 16px; right: 16px; display: inline-flex; align-items: center; padding: 8px 16px; border-radius: 999px; background: var(--navy); color: #ffffff; font-size: 13px; font-weight: 700"><span class="pdot" aria-hidden="true"></span>Próximamente</span>
+            </div>
+            <div style="padding: 28px; display: flex; flex-direction: column; gap: 14px; flex: 1">
+              <p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #3d5870">Análisis temporal</p>
+              <h3 style="margin: 0; font-size: 26px; font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; color: var(--navy)">Desastres naturales en Estados Unidos</h3>
+              <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #2a465f; flex: 1">Identificación de los desastres que causan mayores daños económicos y de cómo evolucionan por región y año.</p>
+              <dl style="margin: 0; padding-top: 18px; border-top: 2px solid var(--tile); display: flex; flex-direction: column; gap: 12px">
+                
+                  <div style="display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 15px; line-height: 1.5">
+                    <dt style="flex: none; width: 108px; font-weight: 800; color: var(--navy)">Datos</dt>
+                    <dd style="margin: 0; flex: 1 1 200px; min-width: 0; color: #2a465f">Fuentes oficiales estadounidenses de desastres y daños</dd>
+                  </div>
+                
+                  <div style="display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 15px; line-height: 1.5">
+                    <dt style="flex: none; width: 108px; font-weight: 800; color: var(--navy)">Herramientas</dt>
+                    <dd style="margin: 0; flex: 1 1 200px; min-width: 0; color: #2a465f">Python · Pandas · Gráficos temporales y geográficos</dd>
+                  </div>
+                
+                  <div style="display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 15px; line-height: 1.5">
+                    <dt style="flex: none; width: 108px; font-weight: 800; color: var(--navy)">Resultado</dt>
+                    <dd style="margin: 0; flex: 1 1 200px; min-width: 0; color: #2a465f">Tendencias históricas, comparativas regionales y ranking de eventos por impacto</dd>
+                  </div>
+                
+              </dl>
+              <a class="nlink" href="https://app.notion.com/p/Proyecto-3-Desastres-naturales-en-Estados-Unidos-405eb6a2c81580b0acb7f4b154123036" target="_blank" rel="noopener noreferrer" aria-label="Ver Desastres naturales en Estados Unidos en Notion">Ver en Notion <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- rótulo gigante que se desplaza con el scroll -->
+  <div aria-hidden="true" style="background: var(--paper); padding: 0 0 80px; overflow: clip">
+    <div class="shift" style="width: max-content; white-space: nowrap; font-family: 'Anton', 'Inter', sans-serif; font-size: clamp(64px, 14vw, 200px); line-height: 1.05; letter-spacing: 0.01em; text-transform: uppercase; color: transparent; -webkit-text-stroke: 2px var(--navy)">
+      Limpiar · <span style="color: var(--navy); -webkit-text-stroke: 0">Analizar</span> · Contar · Limpiar · <span style="color: var(--navy); -webkit-text-stroke: 0">Analizar</span> · Contar ·
+    </div>
+  </div>
+
+  <!-- CONTACTO -->
+  <section id="contacto" style="background: var(--navy); color: #ffffff; overflow: clip">
+    <div style="max-width: 1100px; margin: 0 auto; padding: 104px 32px 88px; display: flex; flex-wrap: wrap; align-items: center; gap: 56px 72px">
+      <h2 class="maskup" style="flex: 1 1 340px; margin: 0; overflow: clip; padding-bottom: 0.1em; font-size: clamp(44px, 6vw, 84px); font-weight: 800; letter-spacing: -0.03em; line-height: 1; color: #ffffff"><span>Hablemos<br>de datos.</span></h2>
+      <div class="reveal" style="flex: 1 1 360px; min-width: 0; padding-left: 32px; border-left: 2px solid var(--navy3); display: flex; flex-direction: column; gap: 22px; font-size: 18px; font-weight: 600">
+        <a class="contact-row" href="mailto:jorgezambranacastillo@gmail.com" style="display: flex; align-items: center; gap: 16px; min-height: 44px; color: #ffffff">
+          <span class="contact-ico" aria-hidden="true" style="flex: none; width: 44px; height: 44px; border-radius: 50%; border: 2px solid #ffffff; display: inline-flex; align-items: center; justify-content: center; transition: background .2s ease, color .2s ease"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg></span>
+          <span style="min-width: 0; overflow-wrap: anywhere">jorgezambranacastillo@gmail.com</span>
+        </a>
+        <a class="contact-row" href="https://www.linkedin.com/in/jorge-zambrana-castillo-91a032280" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 16px; min-height: 44px; color: #ffffff">
+          <span class="contact-ico" aria-hidden="true" style="flex: none; width: 44px; height: 44px; border-radius: 50%; border: 2px solid #ffffff; display: inline-flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800; transition: background .2s ease, color .2s ease">in</span>
+          <span>LinkedIn</span>
+        </a>
+        <a class="contact-row" href="https://github.com/Planzxx" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 16px; min-height: 44px; color: #ffffff">
+          <span class="contact-ico" aria-hidden="true" style="flex: none; width: 44px; height: 44px; border-radius: 50%; border: 2px solid #ffffff; display: inline-flex; align-items: center; justify-content: center; transition: background .2s ease, color .2s ease"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"></path></svg></span>
+          <span>GitHub</span>
+        </a>
+        <div style="display: flex; align-items: center; gap: 16px; min-height: 44px">
+          <span aria-hidden="true" style="flex: none; width: 44px; height: 44px; border-radius: 50%; border: 2px solid #ffffff; display: inline-flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg></span>
+          <span>Alhaurín de la Torre, Málaga</span>
+        </div>
+      </div>
+    </div>
+
+    <div aria-hidden="true" style="position: relative; height: 150px; display: flex; align-items: flex-end; justify-content: space-between">
+      <div style="width: 220px; height: 220px; margin: 0 0 -110px -60px; border-radius: 50%; background: var(--navy2)"></div>
+      <div style="width: 110px; height: 110px; margin-bottom: 0; border-radius: 50% 50% 0 0; background: var(--paper)"></div>
+      <div class="bob" style="width: 70px; height: 70px; margin: 0 8% 40px 0; border-radius: 50%; background: var(--navy3)"></div>
+      <div style="width: 260px; height: 130px; border-radius: 130px 130px 0 0; background: var(--paper)"></div>
+    </div>
+    <p style="margin: 0; padding: 20px 32px; background: var(--deep); text-align: center; font-size: 14px; color: #b9cde0">© 2026 Jorge Zambrana. Todos los derechos reservados. · <a href="#inicio" style="color: #ffffff; font-weight: 700">Volver arriba ↑</a></p>
+  </section>
+
+</div>
+
+
+</body>
+</html>
